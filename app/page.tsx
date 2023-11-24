@@ -2,6 +2,7 @@
 
 import { getPrep, getRecipes, getCatagories } from "@/app/data/getData";
 import Recipes from "./components/Recipes";
+import Hero from "./components/Hero";
 
 export default function Home() {
   const recipes = getRecipes(); // Recuperiamo le ricette
@@ -10,7 +11,8 @@ export default function Home() {
   return (
     <>
       <main className="container mx-auto">
-        <Recipes recipes={recipes} allCategories={allCategories} />
+        <Hero recipes={recipes} />
+        {/* <Recipes recipes={recipes} allCategories={allCategories} /> */}
       </main>
     </>
   );
